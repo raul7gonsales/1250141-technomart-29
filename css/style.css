@@ -29,6 +29,10 @@
   --special-catalog-background: #F7F3EC;
   --special-half-opacity: rgba(255,255,255,0.5);
   --special-third-opacity: rgba(0,0,0,0.3);
+
+  --special-third-link-background: rgba(255,255,255, 0.3);
+  --special-third-hover-background: rgba(197,197,197, 0.3);
+  --special-third-active-background: rgba(169,169,169, 0.3);
 }
 
 /* Global */
@@ -131,7 +135,7 @@ img {
   opacity: 0.5;
 }
 
-.header-about {
+h1 {
   font-size: 13px;
   line-height: 24px;
   font-style: italic;
@@ -197,7 +201,7 @@ img {
 /* MAIN */
 
 .catalog-page {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
 }
 
 h1 {
@@ -217,7 +221,7 @@ h3 {
 }
 
 h4 {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -242,15 +246,15 @@ h4 {
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  background-color: rgba(255,255,255, 0.3);     /* Уточнить насчет цвета */
+  background-color: var(--special-third-link-background);     /* Уточнить насчет цвета */
 }
 
 .offers-item .offer-link:hover {
-  background-color: rgba(197,197,197, 0.3);     /* Уточнить насчет цвета */
+  background-color: var(--special-third-hover-background);     /* Уточнить насчет цвета */
 }
 
 .offers-item .offer-link:active {
-  background-color: rgba(169,169,169, 0.3);     /* Уточнить насчет цвета */
+  background-color: var(--special-third-active-background);     /* Уточнить насчет цвета */
 }
 
 .offers-slider {
@@ -314,7 +318,7 @@ h4 {
 
 .catalog-item span,
 .catalog-item p {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 17px;
@@ -338,7 +342,7 @@ h4 {
 .services p,
 .about p,
 .contacts p {
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -377,7 +381,7 @@ h4 {
 .breadcrumbs a,
 .catalog-section-head {
   color: var(--basic-black);
-  font-family: PT Sans, Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -403,7 +407,7 @@ h4 {
 
 .filter-button {
   background-color: var(--basic-white);
-  border: 1px solid #E5E5E5;
+  border: 1px solid var(--basic-grey-lighter);
   text-transform: uppercase;
   font-size: 13px;
   line-height: 18px;

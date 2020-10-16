@@ -12,12 +12,17 @@
       <section class="header-top">
         <div class="header-top-content container">
           <div class="main-header-logo">
-            <a href="index.html"><img class="main-header-image" src="img/logo-technomart.png" alt="Техномарт" width="108" height="18"></a>
+            <a class="main-header-image" href="index.html"><img src="img/logo-technomart.svg" alt="Техномарт" width="108" height="18"></a>
           </div>
-          <input type="search" class="search" name="search" value="" placeholder="Поиск:">
+          <div class="search">
+            <input type="text" name="search" id="main-search" class="product_search" placeholder="Поиск:" />
+            <label for="main-search" class="main-search_label">
+              <span class="visually-hidden">Поиск</span>
+            </label>
+          </div>
           <ul class="header-top-links">
-            <li class="header-top-item header-link-bookmarks"><a href="blank.html">Закладки</a></li>
-            <li class="header-top-item header-link-cart"><a href="blank.html">Корзина</a></li>
+            <li class="header-top-item header-link-bookmarks"><a class="bookmarks-link" href="blank.html">Закладки: 0</a></li>
+            <li class="header-top-item header-link-cart"><a class="cart-link" href="blank.html">Корзина: 0</a></li>
             <li class="header-top-item header-link-order"><a href="blank.html">Оформить заказ</a></li>
           </ul>
         </div>
@@ -32,7 +37,12 @@
             <span class="address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
           </section>
           <section class="header-login">
-            <a class="login-link" href="blank.html">Войти</a>
+            <a class="login-link" href="blank.html">
+              <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
+                <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
+              </svg>Войти
+            </a>
             <a class="registration-link" href="blank.html">Регистрация</a>
           </section>
         </div>
@@ -54,7 +64,7 @@
         <h2 class="visually-hidden">Основные предложения</h2>
         <div class="offers-grid container">
           <!-- <ul class="offers-list"> -->
-            <div class="offers-item offer-yellow">
+            <div class="offers-item offer-yellow item-new-offers">
               <h3>Материалы</h3>
               <a class="offer-link" href="blank.html">На любой вкус</a>
               <div class="offer-image">
@@ -89,29 +99,40 @@
                 <img class="offer-icon" src="img/icon-5.svg">
               </div>
             </div>
-          <!-- </ul> -->
-          <!--<ul class="offers-slider"> -->
-            <div class="offers-slide">
-              <div class="slide">
-                <img src="img/perforators.png" alt="Перфораторы" width="620" height="266">
-                <div class="black-substrate">
-                  <span>Перфораторы</span>
-                  <p>Настоящие мужские игрушки</p>
+            <div class="offers-slider">
+              <div class="offers-slide">
+                <div class="slide">
+                  <img src="img/perforators.png" alt="Перфораторы" width="620" height="266">
+                  <div class="black-substrate">
+                    <span>Перфораторы</span>
+                    <p>Настоящие мужские игрушки</p>
+                  </div>
+                  <a class="red-button button-slider" href="catalog.html">Открыть каталог</a>
                 </div>
-                <a class="red-button button-slider" href="catalog.html">Открыть каталог</a>
+              </div>
+              <div class="offers-slide visually-hidden">
+                <div class="slide">
+                  <img src="img/drills.png" alt="Дрели" width="620" height="266">
+                  <div class="black-substrate">
+                    <span>Дрели</span>
+                    <p>Соседям на радость</p>
+                  </div>
+                  <a class="red-button button-slider" href="catalog.html">Открыть каталог</a>
+                </div>
+              </div>
+              <button class="slider-control slider-control-left"><span class="visually-hidden">Prev</span></button>
+              <button class="slider-control slider-control-right"><span class="visually-hidden">Next</span></button>
+              <div class="slider-radio">
+                <label for="slider-radio-1">
+                  <input type="radio" name="radio-1" id="slider-radio-1" class="visually-hidden" disabled checked />
+                  <span class="radio-indicator"></span>
+                </label>
+                <label for="slider-radio-2">
+                  <input type="radio" name="radio-2" id="slider-radio-2" class="visually-hidden" disabled />
+                  <span class="radio-indicator"></span>
+                </label>
               </div>
             </div>
-            <!-- <li class="offers-slide">
-              <div class="slide">
-                <img src="img/drills.png" alt="Дрели" width="620" height="266">
-                <div class="black-substrate">
-                  <span>Дрели</span>
-                  <p>Соседям на радость</p>
-                </div>
-                <a class="red-button" href="catalog.html">Открыть каталог</a>
-              </div>
-            </li> -->
-          <!--</ul>-->
         </div>
       </section>
       <section class="popular">
@@ -129,15 +150,17 @@
                 <h4 class="product-name">Перфоратор BOSCH BFG 9000</h4>
               </a>
               <span>32 500 р.</span>
-              <p>
-                25 500 р.
-              </p>
+              <div class="main-price">
+                <p>
+                  25 500 р.
+                </p>
+              </div>
               <div class="catalog-item-buttons">
                 <button type="button" name="button" class="buy-button">Купить</button>
                 <button type="button" name="button" class="bookmark-button">В закладки</button>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item item-new-products">
               <div class="product-image">
                 <img src="img/bfg3000.png" alt="bfg3000" width="127" height="112">
               </div>
@@ -145,9 +168,11 @@
                 <h4 class="product-name">Перфоратор BOSCH BFG 3000</h4>
               </a>
               <span>22 500 р.</span>
-              <p>
-                15 500 р.
-              </p>
+              <div class="main-price">
+                <p>
+                  15 500 р.
+                </p>
+              </div>
               <div class="catalog-item-buttons">
                 <button type="button" name="button" class="buy-button">Купить</button>
                 <button type="button" name="button" class="bookmark-button">В закладки</button>
@@ -161,25 +186,28 @@
                 <h4 class="product-name">Перфоратор BOSCH BFG 6000</h4>
               </a>
               <span>30 500 р.</span>
-              <p>
-                25 500 р.
-              </p>
+              <div class="main-price">
+                <p>
+                  25 500 р.
+                </p>
+              </div>
               <div class="catalog-item-buttons">
                 <button type="button" name="button" class="buy-button">Купить</button>
                 <button type="button" name="button" class="bookmark-button">В закладки</button>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item item-new-products">
               <div class="product-image">
                 <img src="img/bfg2000.png" alt="bfg2000" width="127" height="112">
               </div>
               <a href="#">
                 <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               </a>
-              <span>&nbsp;</span>
-              <p>
-                25 500 р.
-              </p>
+              <div class="main-price">
+                <p>
+                  12 500 р.
+                </p>
+              </div>
               <div class="catalog-item-buttons">
                 <button type="button" name="button" class="buy-button">Купить</button>
                 <button type="button" name="button" class="bookmark-button">В закладки</button>
@@ -230,9 +258,12 @@
           </p>
           <div class="services-columns">
             <div class="services-buttons">
-              <button class="service-button" name="button">Доставка</button>
+              <button class="service-button service-button-active" name="button">Доставка</button>
               <button class="service-button" name="button">Гарантия</button>
               <button class="service-button" name="button">Кредит</button>
+            </div>
+            <div class="divider">
+              <img src="img/service-divider.png" alt="">
             </div>
             <div class="services-description">
               <ul class="services-list">
@@ -289,7 +320,7 @@
       <section class="top-footer">
         <div class="container footer-grid">
           <div class="main-footer-logo">
-            <a href="index.html"><img class="main-footer-image" src="img/logo-technomart.png" alt="Техномарт" width="138" height="23"></a>
+            <a href="index.html"><img class="main-footer-image" src="img/logo-technomart.svg" alt="Техномарт" width="138" height="23"></a>
           </div>
           <div class="top-footer-address">
             <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -315,14 +346,23 @@
         <div class="container bottom-footer-grid">
           <p>© 2010–2019 Компания «Техномарт» Все права защищены</p>
           <ul class="socials">
-            <li class="social-item">
-              <a href="#">Вконтакте</a>
+            <li>
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg width="27" height="16" viewBox="0 0 128 76"><path d="M125,5.15c.89-3,0-5.15-4.23-5.15h-14a6,6,0,0,0-6.09,4S93.59,21.31,83.5,32.59c-3.26,3.26-4.74,4.3-6.52,4.3-.89,0-2.18-1-2.18-4V5.15c0-3.56-1-5.15-4-5.15h-22a3.37,3.37,0,0,0-3.56,3.22c0,3.37,5,4.15,5.56,13.64V37.48c0,4.52-.82,5.34-2.6,5.34-4.74,0-16.29-17.43-23.13-37.38C23.72,1.57,22.38,0,18.8,0H4.8C.8,0,0,1.88,0,4c0,3.71,4.75,22.1,22.1,46.42C33.67,67,50,76,64.8,76c8.9,0,10-2,10-5.45V58c0-4,.84-4.8,3.66-4.8,2.08,0,5.64,1,13.94,9C101.9,71.74,103.46,76,108.8,76h14c4,0,6-2,4.85-6s-5.8-9.64-11.81-16.4c-3.27-3.86-8.16-8-9.64-10.09-2.08-2.67-1.49-3.86,0-6.23,0,0,17-24,18.83-32.18Z" fill="#fff"/></svg>
+              </a>
             </li>
-            <li class="social-item">
-              <a href="#">Фейсбук</a>
+            <li>
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg width="19" height="22" viewBox="0 0 10.15 21.74"><path d="M3.34 1.12A4.77 4.77 0 0 1 6.53 0h3.61v3.81H7.81a1.07 1.07 0 0 0-1.09.83v2.55h3.42c-.08 1.23-.24 2.45-.41 3.67h-3v10.87H2.21V10.86H0V7.21h2.19V3.66a3.83 3.83 0 0 1 1.15-2.54z" fill="#fff"/></svg>
+              </a>
             </li>
-            <li class="social-item">
-              <a href="#">Инстаграм</a>
+            <li>
+              <a class="social-button" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                <svg width="20" height="20" viewBox="0 0 20 20"><path d="M18 0H2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-8 6a4 4 0 1 1-4 4 4 4 0 0 1 4-4zM2.5 18a.47.47 0 0 1-.5-.5V9h2.1a3.4 3.4 0 0 0-.1 1 6 6 0 1 0 12 0 3.4 3.4 0 0 0-.1-1H18v8.5a.47.47 0 0 1-.5.5zM18 4.5a.47.47 0 0 1-.5.5h-2a.47.47 0 0 1-.5-.5v-2a.47.47 0 0 1 .5-.5h2a.47.47 0 0 1 .5.5z" fill="#fff"/></svg>
+              </a>
             </li>
           </ul>
           <p class="mailto">
@@ -334,5 +374,44 @@
         </div>
       </section>
     </footer>
+      <section class="modal modal-cart">
+        <div class="modal-order-sent">
+          <ul class="cart-item-placed">
+            <li><img src="img/icon-mark.svg" width="66" height="66"></li>
+            <li>Товар добавлен в корзину!</li>
+          </ul>
+          <div class="cart-modal-options">
+            <a href="order.html" class="red-button finalize-order">Оформить заказ</a>
+            <button class="close-button">Продолжить покупки</button>
+            <button class="modal-close" type="button">Закрыть</button>
+          </div>
+        </div>
+      </section>
+      <section class="modal modal-map">
+        <h3 class="visually-hidden">Как до нас добраться</h3>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad0301c9f4d4cb6a0db56005e1199f5fdc5e4a03f842f085cd255161050cbf77a&amp;source=constructor" width="940" height="450" frameborder="0"></iframe>
+        <button class="modal-close" type="button">Закрыть</button>
+      </section>
+      <section class="modal feedback-modal">
+        <form method="post" name="write-us-form" class="write-us-form" action="https://echo.htmlacademy.ru">
+          <div class="form-container">
+            <p>
+              <label for="name">Ваше имя</label>
+              <input type="text" name="name" placeholder="Имя Фамилия" id="name" class="name">
+            </p>
+            <p>
+            <label for="e-mail">Ваш e-mail</label>
+              <input type="text" name="e-mail" placeholder="email@example.com" id="e-mail" class="e-mail">
+            </p>
+          </div>
+        <p class="mail-text">Текст письма</p>
+        <textarea rows="10" cols="45" name="text" class="form-text" placeholder="В свободной форме"></textarea>
+        <div class="feedback-button-wrapper">
+          <button type="submit" class="red-button feedback-button">Отправить</button>
+          <button type="button" class="modal-close">Закрыть</button>
+        </div>
+        </form>
+      </section>
+    <script src="js/main-script.js"></script>
   </body>
 </html>

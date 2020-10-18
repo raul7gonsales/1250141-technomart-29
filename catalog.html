@@ -79,7 +79,12 @@
       <div class="container catalog-grid">
         <ul class="breadcrumbs">
           <li>
-            <a href="index.html">Главная</a>
+            <a href="index.html">
+              <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 7.99999V12H6V7.99999H8V12H12V7.99999L7 3.51599L2 7.99999Z" fill="#C1C6CE"/>
+                <path d="M13.831 6.365L12 4.751V0H9.99998V2.987L7.33198 0.635C7.31198 0.618 7.28898 0.612 7.26798 0.598C7.24294 0.579705 7.21614 0.56396 7.18798 0.551C7.15708 0.540195 7.12529 0.532163 7.09298 0.527C7.06198 0.521 7.03198 0.515 6.99998 0.515C6.96898 0.515 6.93898 0.521 6.90798 0.527C6.87551 0.531919 6.84366 0.5403 6.81298 0.552C6.78498 0.563 6.75998 0.581 6.73298 0.598C6.71198 0.612 6.68798 0.618 6.66898 0.635L0.170976 6.365C0.0162401 6.50291 -0.0375953 6.72187 0.0355474 6.9158C0.10869 7.10974 0.293707 7.23862 0.500976 7.24C0.622907 7.24035 0.740711 7.19586 0.831976 7.115L6.99998 1.677L13.169 7.115C13.3778 7.27913 13.6784 7.25178 13.8542 7.05265C14.0299 6.85352 14.0198 6.55183 13.831 6.365Z" fill="#C1C6CE"/>
+              </svg>
+            </a>
           </li>
           <li>
             <a href="catalog.html">Каталог</a>
@@ -87,8 +92,8 @@
           <li>
             <a href="catalog.html">Инструмент</a>
           </li>
-          <li>
-            <a href="#">Перфораторы</a>
+          <li class="breadcrumbs-current">
+            <a>Перфораторы</a>
           </li>
         </ul>
         <div class="section-head">
@@ -98,47 +103,66 @@
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <div class="catalog-section-background">
-            <span class="catalog-section-head">Фильтр:</span>
+            <span class="catalog-section-head filter-head">Фильтр:</span>
           </div>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset>
+            <fieldset class="filter-item">
               <legend>Цена:</legend>
-              <!-- Здесь будет ползунок с ценой -->
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="text" name="min-price" value="0">
+                  </label>
+                  <div class="mdash"></div>
+                  <label class="max-price">
+                    <input type="text" name="max-price" value="30000">
+                  </label>
+                </div>
+              </div>
             </fieldset>
+            <div class="filter-divider"></div>
             <fieldset>
-              <legend>Производители:</legend>
-              <ul>
+              <legend class="filter-manufacturers">Производители:</legend>
+              <ul class="manufacturer-list">
                 <li class="filter-option filter-checkbox">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="baxter-of-california" id="filter-bosch" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
                   <label for="filter-bosch">Bosch</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="mr-natty" id="filter-interskol">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interskol" id="filter-interskol">
                   <label for="filter-interskol">Интерскол</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="suavecito" id="filter-makita" checked>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
                   <label for="filter-makita">Makita</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="malin-goetz" id="filter-dewalt">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
                   <label for="filter-dewalt">Dewalt</label>
                 </li>
                 <li class="filter-option filter-checkbox">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="murrays" id="filter-hitachi">
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi" checked disabled>
                   <label for="filter-hitachi">Hitachi</label>
                 </li>
               </ul>
             </fieldset>
+            <div class="filter-divider"></div>
             <fieldset>
-              <legend>Питание:</legend>
-              <ul>
+              <legend class="filter-power">Питание:</legend>
+              <ul class="power-list">
                 <li class="filter-option filter-radio">
-                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="shaving" id="filter-rechargeable" checked>
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
                   <label for="filter-rechargeable">Аккумуляторные</label>
                 </li>
                 <li class="filter-option filter-radio">
-                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="hair-care" id="filter-network">
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="product-group" value="network" id="filter-network">
                   <label for="filter-network">Сетевые</label>
                 </li>
               </ul>
@@ -151,13 +175,21 @@
           <div class="catalog-section-background product-sorting">
             <span class="catalog-section-head">Сортировка:</span>
             <ul class="catalog-sorting">
-              <li class="sorting-method">по цене</li>
+              <li class="sorting-method sorting-active">по цене</li>
               <li class="sorting-method">по типу</li>
               <li class="sorting-method">по функционалу</li>
             </ul>
-            <div class="sorting-icons">
-              Иконки
-            </div>
+            <ul class="sorting-icons">
+              <li class="sort-item-arrow arrow-active">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-up">
+                <path fill="#c5c5c5" d="M5.5 0L0 10h11z" />
+              </svg>
+              </li>
+              <li class="sort-item-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-down">
+                <path fill="#c5c5c5" d="M5.5 10L0 0h11" /></svg>
+              </li>
+            </ul>
           </div>
           <ul class="catalog-list">
             <li class="catalog-item">

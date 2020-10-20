@@ -687,11 +687,6 @@ h4 {
   align-items: center;
 }
 
-/*.offer-icon {
-  display: block;
-  margin: auto;
-}*/
-
 .offers-slider {
   grid-area: slide;
   position: relative;
@@ -1003,6 +998,8 @@ h4 {
 
 .services-description {
   width: 700px;
+  height: 290px;
+  padding-left: 80px;
 }
 
 .services p,
@@ -1042,18 +1039,6 @@ h4 {
   color: var(--basic-white);
   background-color: var(--basic-asphalt-mid);
   box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
-}
-
-.services-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.services-item {
-  position: relative;
-  height: 260px;
-  padding-left: 80px;
 }
 
 .services-item-head {
@@ -1349,14 +1334,17 @@ h4 {
   background-image: url("../img/checkbox-off.svg");
 }
 
-.filter-input-checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-  left: -32px;
-  top: -3px;
+.filter-input-checkbox:checked + label::before {
   width: 27px;
-  height: 23px;
   background-image: url("../img/checkbox-on.svg");
+}
+
+.filter-input-checkbox:hover + label::before {
+  background-image: url("../img/checkbox-off-hover.svg");
+}
+
+.filter-input-checkbox:checked:hover + label::before {
+  background-image: url("../img/checkbox-on-hover.svg");
 }
 
 .filter-input-radio + label::before {
@@ -1369,7 +1357,7 @@ h4 {
   background-image: url("../img/radio-off.svg");
 }
 
-.filter-input-radio:checked + label::after {
+.filter-input-radio:checked + label::before {
   content: "";
   position: absolute;
   left: -32px;
@@ -1379,10 +1367,12 @@ h4 {
   background-image: url("../img/radio-on.svg");
 }
 
-.filter-input-checkbox:hover path,
-.filter-input-radio:hover path,
-.filter-input-radio:hover circle {
-  fill: #b5b5b5;
+.filter-input-radio:hover + label::before {
+  background-image: url("../img/radio-off-hover.svg");
+}
+
+.filter-input-radio:checked:hover + label::before {
+  background-image: url("../img/radio-on-hover.svg");
 }
 
 .filter-input-checkbox:disabled + label:before,
@@ -1398,6 +1388,10 @@ h4 {
 .filter-input-checkbox:disabled + label,
 .filter-input-radio:disabled + label {
   color: var(--special-fourth-opacity);
+}
+
+.filter-input:focus + label::before {
+  outline: thin dotted;
 }
 
 
@@ -1892,6 +1886,9 @@ h4 {
   width: 220px;
   height: 37px;
   padding: 13px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
   border: 2px solid var(--basic-grey-light);
   border-radius: 2px;
   margin-top: 10px;
@@ -1905,6 +1902,11 @@ h4 {
   width: 460px;
   height: 114px;
   margin: 0 80px 33px 80px;
+  padding-left: 13px;
+  padding-top: 6px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
   border: 2px solid var(--basic-grey-light);
   border-radius: 2px;
 }

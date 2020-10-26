@@ -98,7 +98,11 @@ img {
   height: auto;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /* GRID */
 
@@ -128,6 +132,7 @@ img {
 
 .header-top-content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .main-header-logo {
@@ -210,6 +215,7 @@ img {
 
 .header-top-links {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0;
   padding: 0;
@@ -425,6 +431,7 @@ h1 {
   margin-top: 3px;
   width: 300px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   margin-left: 50px;
 }
@@ -534,6 +541,7 @@ h1 {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   height: 60px;
@@ -748,6 +756,7 @@ h4 {
 
 .red-button {
   display: inline-block;
+  vertical-align: top;
   background-color: var(--basic-red);
   color: var(--basic-white);
   text-transform: uppercase;
@@ -862,6 +871,7 @@ h4 {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -876,6 +886,8 @@ h4 {
   min-height: 318px;
   text-align: center;
   border: 1px solid var(--special-border);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1000,6 +1012,8 @@ h4 {
   height: 145px;
   margin-bottom: 20px;
   border: 1px solid var(--special-border);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -1024,6 +1038,7 @@ h4 {
   margin-bottom: 13px;
   color: var(--basic-black);
   display: inline-block;
+  vertical-align: top;
   letter-spacing: -0.8px;
 }
 
@@ -1121,6 +1136,7 @@ h4 {
   margin-bottom: 10px;
   color: var(--basic-black);
   display: inline-block;
+  vertical-align: top;
   letter-spacing: -0.8px;
 }
 
@@ -1612,6 +1628,7 @@ h4 {
   margin-top: 30px;
   margin-bottom: 30px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-item {
@@ -1730,6 +1747,7 @@ h4 {
 .footer-bottom-nav-list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -1797,6 +1815,7 @@ h4 {
 .bottom-footer .mailto,
 .bottom-footer .site {
   display: inline-block;
+  vertical-align: top;
   width: 150px;
   margin-top: 15px;
 }

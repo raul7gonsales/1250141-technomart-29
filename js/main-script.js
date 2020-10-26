@@ -8,13 +8,13 @@
       map_link = document.querySelector(".map-image"),
       map_popup = document.querySelector(".modal-map");
 
-    for (var i = 0; i < buyButtons.length; i++) {
+    for (var i = 0; i < buy_buttons.length; i++) {
       buy_buttons[i].addEventListener('click', function(e) {
         e.preventDefault();
         cart_modal.classList.add("modal-show");
       });
     }
-    for (var j = 0; j < closeButtons.length; j++) {
+    for (var j = 0; j < close_buttons.length; j++) {
       close_buttons[j].addEventListener("click", function(e) {
         e.preventDefault();
         e.target.closest(".modal").classList.remove("modal-show");
@@ -88,55 +88,55 @@
 
 
 (function() {
-    if (document.querySelector(".services-columns") != null) {
-        var services_carousel_controls = document.querySelectorAll(".services-buttons .service-button");
-        var services_carousel_contents = document.querySelectorAll(".services .services-description div");
-        for (let index = 0; index < services_carousel_controls.length; index++) {
-            const element = services_carousel_controls[index];
-            element.addEventListener("click", function(event) {
-                event.preventDefault();
-                services_carousel_contents.forEach(element => {
-                    element.classList.add("visually-hidden");
-                });
-                services_carousel_controls.forEach(element => {
-                    element.classList.remove("service-button-active");
-                });
-                element.classList.add("service-button-active");
-                services_carousel_contents[index].classList.remove("visually-hidden");
-            });
-        }
-
-        var intervalHandler = function() {
-            if (services_carousel_controls[0].classList.contains("service-button-active")) {
-                services_carousel_controls[0].classList.remove("service-button-active");
-                services_carousel_controls[1].classList.add("service-button-active");
-                services_carousel_contents[0].classList.add("visually-hidden");
-                services_carousel_contents[1].classList.remove("visually-hidden");
-            } else {
-                if (services_carousel_controls[1].classList.contains("service-button-active")) {
-                    services_carousel_controls[1].classList.remove("service-button-active");
-                    services_carousel_controls[2].classList.add("service-button-active");
-                    services_carousel_contents[1].classList.add("visually-hidden");
-                    services_carousel_contents[2].classList.remove("visually-hidden");
-                } else {
-                    services_carousel_controls[2].classList.remove("service-button-active");
-                    services_carousel_controls[0].classList.add("service-button-active");
-                    services_carousel_contents[2].classList.add("visually-hidden");
-                    services_carousel_contents[0].classList.remove("visually-hidden");
-                }
-            }
-        };
-
-        var interval = setInterval(intervalHandler, 3000);
-
-        document.querySelector(".services .services-buttons").addEventListener("mouseover", function (event) {
-            event.preventDefault();
-            clearInterval(interval);
+  if (document.querySelector(".services-columns") != null) {
+    var services_carousel_controls = document.querySelectorAll(".services-buttons .service-button");
+    var services_carousel_contents = document.querySelectorAll(".services .services-description div");
+    for (let index = 0; index < services_carousel_controls.length; index++) {
+      const element = services_carousel_controls[index];
+      element.addEventListener("click", function(event) {
+        event.preventDefault();
+        services_carousel_contents.forEach(element => {
+          element.classList.add("visually-hidden");
         });
-
-        document.querySelector(".services .services-buttons").addEventListener("mouseout", function (event) {
-            event.preventDefault();
-            interval = setInterval(intervalHandler, 3000);
+        services_carousel_controls.forEach(element => {
+          element.classList.remove("service-button-active");
         });
+        element.classList.add("service-button-active");
+        services_carousel_contents[index].classList.remove("visually-hidden");
+      });
     }
+
+    var intervalHandler = function() {
+      if (services_carousel_controls[0].classList.contains("service-button-active")) {
+        services_carousel_controls[0].classList.remove("service-button-active");
+        services_carousel_controls[1].classList.add("service-button-active");
+        services_carousel_contents[0].classList.add("visually-hidden");
+        services_carousel_contents[1].classList.remove("visually-hidden");
+        } else {
+          if (services_carousel_controls[1].classList.contains("service-button-active")) {
+            services_carousel_controls[1].classList.remove("service-button-active");
+            services_carousel_controls[2].classList.add("service-button-active");
+            services_carousel_contents[1].classList.add("visually-hidden");
+            services_carousel_contents[2].classList.remove("visually-hidden");
+            } else {
+              services_carousel_controls[2].classList.remove("service-button-active");
+              services_carousel_controls[0].classList.add("service-button-active");
+              services_carousel_contents[2].classList.add("visually-hidden");
+              services_carousel_contents[0].classList.remove("visually-hidden");
+              }
+          }
+    };
+
+    var interval = setInterval(intervalHandler, 3000);
+
+    document.querySelector(".services .services-buttons").addEventListener("mouseover", function (event) {
+      event.preventDefault();
+      clearInterval(interval);
+    });
+
+    document.querySelector(".services .services-buttons").addEventListener("mouseout", function (event) {
+      event.preventDefault();
+      interval = setInterval(intervalHandler, 3000);
+    });
+  }
 })();

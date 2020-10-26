@@ -43,6 +43,9 @@
   --special-fourth-opacity: rgba(0,0,0,0.4);
   --special-shadow: rgba(0,0,0,0.24);
   --special-shadow-light: rgba(0,0,0,0.15);
+  --special-shadow-service: #405069;
+  --special-filter-shadow: #CFCFCF;
+  --special-price-controls: #283136;
 
   --special-third-link-background: rgba(255,255,255, 0.3);
   --special-third-hover-background: rgba(197,197,197, 0.3);
@@ -164,7 +167,7 @@ img {
   line-height: 24px;
 }
 
-.product_search::placeholder {
+::-webkit-input-placeholder {
   color: var(--basic-white);
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
@@ -318,14 +321,14 @@ img {
 }
 
 .header-about {
-  width: 240px;
+  width: 220px;
   display: block;
   margin-left: 30px;
 }
 
 h1 {
   display: block;
-  width: 200px;
+  width: 220px;
   font-size: 16px;
   line-height: 24px;
   margin-top: 0;
@@ -337,7 +340,7 @@ h1 {
 
 .header-contacts {
   width: 400px;
-  padding-left: 90px;
+  padding-left: 70px;
   display: flex;
   flex-direction: column;
 }
@@ -520,7 +523,7 @@ h1 {
 }
 
 .profile-items a:active {
-  color: #c5c5c5;
+  color: var(--basic-grey-light);
 }
 
 .main-navigation {
@@ -1068,7 +1071,7 @@ h4 {
   padding-left: 22px;
   color: var(--basic-white);
   background-color: var(--basic-asphalt-light);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-asphalt-mid), inset 0px 1px 0px var(--special-shadow-service);
   border: 0;
 }
 
@@ -1086,7 +1089,7 @@ h4 {
 .service-button-active:hover {
   color: var(--basic-white);
   background-color: var(--basic-asphalt-mid);
-  box-shadow: 0px 1px 0px #293449, inset 0px 1px 0px #405069;
+  box-shadow: 0px 1px 0px var(--basic-asphalt-mid), inset 0px 1px 0px var(--special-shadow-service);
 }
 
 .services-item-head {
@@ -1340,7 +1343,7 @@ h4 {
   border: 8px solid var(--basic-white);
   background-color: var(--special-filter-toggle);
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 #cfcfcf;
+  box-shadow: 0 2px 1px 0 var(--special-filter-shadow);
   cursor: pointer;
 }
 
@@ -1369,7 +1372,7 @@ h4 {
   margin-top: -6px;
   padding: 10px;
   text-align: center;
-  color: #283136;
+  color: var(--special-price-controls);
   border: none;
   border-radius: 5px;
   background-color: var(--special-catalog-background);
@@ -1616,7 +1619,6 @@ h4 {
   height: 38px;
   background: var(--basic-white);
   border: 1px solid var(--basic-grey-lighter);
-  /*box-sizing: border-box;*/
   text-transform: uppercase;
   border-radius: 2px;
   cursor: pointer;
@@ -2021,6 +2023,13 @@ h4 {
   margin-top: 13px;
 }
 
+.feedback-modal input::-webkit-input-placeholder {
+  color: var(--basic-grey-dark);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+}
+
 .feedback-modal .name {
   margin-right: 20px;
 }
@@ -2036,6 +2045,13 @@ h4 {
   line-height: 24px;
   border: 2px solid var(--basic-grey-light);
   border-radius: 2px;
+}
+
+.feedback-modal textarea::-webkit-input-placeholder {
+  color: var(--basic-grey-dark);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
 }
 
 .mail-text {

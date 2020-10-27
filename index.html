@@ -16,8 +16,8 @@
           </div>
           <div class="search">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <input type="text" name="search" class="product_search" placeholder="Поиск:" />
-              <label for="main-search" class="main-search_label">
+              <input type="text" name="search" class="product_search" id="main-search" placeholder="Поиск:" />
+              <label for="main-search" class="main-search-label">
                 <span class="visually-hidden">Поиск</span>
               </label>
             </form>
@@ -69,35 +69,35 @@
               <h3>Материалы</h3>
               <a tabindex="0" class="offer-link" href="blank.html">На любой вкус</a>
               <div class="offer-image">
-                <img class="offer-icon" src="img/icon-1.svg" alt="Предложения на любой вкус">
+                <img class="offer-icon" src="img/icon-1.svg" width="44px" height="65px" alt="Предложения на любой вкус">
               </div>
             </div>
             <div class="offers-item offer-blue">
               <h3>Инструмент</h3>
               <a tabindex="0" class="offer-link" href="blank.html">На все случаи</a>
               <div class="offer-image">
-                <img class="offer-icon" src="img/icon-2.svg" alt="Предложения на все случаи">
+                <img class="offer-icon" src="img/icon-2.svg" width="75px" height="61px" alt="Предложения на все случаи">
               </div>
             </div>
             <div class="offers-item offer-lilac">
               <h3>Техника</h3>
               <a tabindex="0" class="offer-link" href="blank.html">Для стройки</a>
               <div class="offer-image">
-                <img class="offer-icon" src="img/icon-3.svg" alt="Предложения для стройки">
+                <img class="offer-icon" src="img/icon-3.svg" width="78px" height="62px" alt="Предложения для стройки">
               </div>
             </div>
             <div class="offers-item offer-greenlight">
               <h3>Скидки 50%</h3>
               <a tabindex="0" class="offer-link" href="blank.html">На 350 товаров</a>
               <div class="offer-image">
-                <img class="offer-icon" src="img/icon-4.svg" alt="Предложения со скидками">
+                <img class="offer-icon" src="img/icon-4.svg" width="59px" height="73px" alt="Предложения со скидками">
               </div>
             </div>
             <div class="offers-item offer-yellowlight">
               <h3>Доставка</h3>
               <a tabindex="0" class="offer-link" href="blank.html">Бесплатно</a>
               <div class="offer-image">
-                <img class="offer-icon" src="img/icon-5.svg" alt="Доставка бесплатно">
+                <img class="offer-icon" src="img/icon-5.svg" width="78px" height="63px" alt="Доставка бесплатно">
               </div>
             </div>
             <div class="offers-slider">
@@ -225,28 +225,28 @@
           </div>
           <ul class="manufacturers-list">
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_bosch.png" alt="bosch" width="126" height="37"></a>
+              <a tabindex="0" href=""><img src="img/supplier-bosch.png" alt="bosch" width="126" height="37"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_makita.png" alt="makita" width="123" height="40"></a>
+              <a tabindex="0" href=""><img src="img/supplier-makita.png" alt="makita" width="123" height="40"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_dewalt.png" alt="dewalt" width="146" height="44"></a>
+              <a tabindex="0" href=""><img src="img/supplier-dewalt.png" alt="dewalt" width="146" height="44"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_interskol.png" alt="interskol" width="200" height="75"></a>
+              <a tabindex="0" href=""><img src="img/supplier-interskol.png" alt="interskol" width="200" height="75"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_hitachi.png" alt="hitachi" width="169" height="31"></a>
+              <a tabindex="0" href=""><img src="img/supplier-hitachi.png" alt="hitachi" width="169" height="31"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_lg.png" alt="lg" width="121" height="73"></a>
+              <a tabindex="0" href=""><img src="img/supplier-lg.png" alt="lg" width="121" height="73"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_aeg.png" alt="aeg" width="151" height="96"></a>
+              <a tabindex="0" href=""><img src="img/supplier-aeg.png" alt="aeg" width="151" height="96"></a>
             </li>
             <li class="manufacturer-item">
-              <a tabindex="0" href=""><img src="img/supplier_metabo.png" alt="metabo" width="204" height="69"></a>
+              <a tabindex="0" href=""><img src="img/supplier-metabo.png" alt="metabo" width="204" height="69"></a>
             </li>
           </ul>
         </div>
@@ -264,7 +264,7 @@
               <button class="service-button" name="button">Кредит</button>
             </div>
             <div class="divider">
-              <img src="img/service-divider.png" alt="">
+              <img src="img/service-divider.png" alt="Разделитель колонок" width="10px" height="267px">
             </div>
             <div class="services-description">
               <div class="services-item service-delivery">
@@ -409,12 +409,14 @@
               <input type="text" name="e-mail" placeholder="email@example.com" id="e-mail" class="e-mail">
             </p>
           </div>
-        <p class="mail-text">Текст письма:</p>
-        <textarea rows="10" cols="45" name="text" class="form-text" placeholder="В свободной форме"></textarea>
-        <div class="feedback-button-wrapper">
-          <button type="submit" class="red-button feedback-button">Отправить</button>
-          <button type="button" class="modal-close">Закрыть</button>
-        </div>
+          <div class="textarea-container">
+            <label for="form-text" class="mail-text">Текст письма:</label>
+            <textarea rows="10" cols="45" name="text" class="form-text" id="form-text" placeholder="В свободной форме"></textarea>
+          </div>
+          <div class="feedback-button-wrapper">
+            <button type="submit" class="red-button feedback-button">Отправить</button>
+            <button type="button" class="modal-close">Закрыть</button>
+          </div>
         </form>
       </section>
     <script src="js/main-script-min.js"></script>

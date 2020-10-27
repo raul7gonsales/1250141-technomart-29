@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles-min.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -15,10 +15,12 @@
             <a class="main-header-image"><img src="img/logo-technomart.svg" alt="Техномарт" width="108" height="18"></a>
           </div>
           <div class="search">
-            <input type="text" name="search" class="product_search" placeholder="Поиск:" />
-            <label for="main-search" class="main-search_label">
-              <span class="visually-hidden">Поиск</span>
-            </label>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <input type="text" name="search" class="product_search" placeholder="Поиск:" />
+              <label for="main-search" class="main-search_label">
+                <span class="visually-hidden">Поиск</span>
+              </label>
+            </form>
           </div>
           <ul class="header-top-links">
             <li class="header-top-item header-link-bookmarks"><a tabindex="0" class="bookmarks-link" href="blank.html">Закладки: 0</a></li>
@@ -415,6 +417,6 @@
         </div>
         </form>
       </section>
-    <script src="js/main-script.js"></script>
+    <script src="js/main-script-min.js"></script>
   </body>
 </html>

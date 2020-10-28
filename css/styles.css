@@ -851,17 +851,19 @@ h4 {
 }
 
 .section-header {
+  display: block;
+  width: 500px;
   padding-top: 4px;
   letter-spacing: -0.8px;
 }
 
 .button-popular {
-  margin-left: 443px;
+  margin-left: 205px;
   margin-top: 24px;
 }
 
 .button-manufacturers {
-  margin-left: 334px;
+  margin-left: 202px;
   margin-top: 23px;
 }
 
@@ -1564,7 +1566,7 @@ h4 {
   margin-right: 65px;
 }
 
-.sorting-method {
+.catalog-sorting .sorting-method {
   color: var(--special-third-opacity);
   cursor: pointer;
   display: block;
@@ -1573,12 +1575,13 @@ h4 {
   border-bottom: 1px dotted var(--basic-red);
 }
 
-.sorting-method:hover {
+.catalog-sorting .sorting-method:hover {
   color: var(--basic-black);
   border-bottom: 1px solid var(--basic-red);
 }
 
-.sorting-active {
+.catalog-sorting .sorting-active,
+.catalog-sorting .sorting-active:hover {
   color: var(--basic-red);
   border-bottom: 0;
 }
@@ -1694,11 +1697,11 @@ h4 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 325px 1fr;
+  grid-template-columns: 380px 1fr;
   grid-template-rows:
     68px
     1fr;
-  grid-column-gap: 68px;
+  grid-column-gap: 13px;
   grid-row-gap: 22px;
 }
 
@@ -1730,6 +1733,7 @@ h4 {
 
 .footer-top-nav-list {
   align-self: start;
+  margin: 0;
   margin-top: 37px;
   padding: 0;
   grid-column: 2 / -1;
@@ -1739,8 +1743,10 @@ h4 {
 .footer-bottom-nav-list {
   grid-column: 2 / -1;
   grid-row: 2 / -1;
+  margin: 0;
   margin-top: 5px;
   padding-left: 23px;
+  align-self: start;
 }
 
 .footer-top-nav-list,

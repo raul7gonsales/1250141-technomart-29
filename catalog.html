@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styles-min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -178,19 +178,23 @@
           <div class="catalog-section-background product-sorting">
             <span class="catalog-section-head">Сортировка:</span>
             <ul class="catalog-sorting">
-              <li tabindex="0" class="sorting-method sorting-active">по цене</li>
-              <li tabindex="0" class="sorting-method">по типу</li>
-              <li tabindex="0" class="sorting-method">по функционалу</li>
+              <li tabindex="0"><a class="sorting-method sorting-active">по цене</a></li>
+              <li tabindex="0"><a class="sorting-method">по типу</a></li>
+              <li tabindex="0"><a class="sorting-method">по функционалу</a></li>
             </ul>
             <ul class="sorting-icons">
               <li tabindex="0" class="sort-item-arrow arrow-active">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-up">
-                <path fill="#c5c5c5" d="M5.5 0L0 10h11z" />
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-up">
+                  <path fill="#c5c5c5" d="M5.5 0L0 10h11z" />
+                </a>
               </svg>
               </li>
               <li tabindex="0" class="sort-item-arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-down">
-                <path fill="#c5c5c5" d="M5.5 10L0 0h11" /></svg>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-down">
+                  <path fill="#c5c5c5" d="M5.5 10L0 0h11" /></svg>
+                </a>
               </li>
             </ul>
           </div>
@@ -455,6 +459,6 @@
         </div>
       </div>
     </section>
-    <script src="js/main-script-min.js"></script>
+    <script src="js/main-script.js"></script>
   </body>
 </html>

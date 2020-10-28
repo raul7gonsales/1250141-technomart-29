@@ -9,7 +9,7 @@
       map_popup = document.querySelector(".modal-map");
 
     for (var i = 0; i < buy_buttons.length; i++) {
-      buy_buttons[i].addEventListener('click', function(e) {
+      buy_buttons[i].addEventListener("click", function(e) {
         e.preventDefault();
         cart_modal.classList.add("modal-show");
       });

@@ -46,6 +46,7 @@
   --special-shadow-service: #405069;
   --special-filter-shadow: #CFCFCF;
   --special-price-controls: #283136;
+  --special-slider-background: #B2A18D;
 
   --special-third-link-background: rgba(255,255,255, 0.3);
   --special-third-hover-background: rgba(197,197,197, 0.3);
@@ -332,7 +333,7 @@ img {
   margin-left: 30px;
 }
 
-h1 {
+.site-header {
   display: block;
   width: 220px;
   font-size: 16px;
@@ -544,7 +545,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
-  height: 60px;
+  min-height: 60px;
   padding: 0;
 
   list-style: none;
@@ -573,26 +574,17 @@ h1 {
   font-family: "PT Sans", Arial, sans-serif;
 }
 
-h2 {
+.section-header,
+.services-head,
+.services-item-head,
+.about-head,
+.catalog-header,
+.category-head {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-asphalt-light);
   text-transform: uppercase;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-h4 {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
-  color: var(--basic-black);
 }
 
 .item-new-offers::after,
@@ -653,7 +645,9 @@ h4 {
   padding-left: 23px;
 }
 
-.offers-item h3 {
+.offer-header {
+  font-size: 24px;
+  line-height: 30px;
   margin: 0;
   color: var(--basic-white);
 }
@@ -686,37 +680,39 @@ h4 {
 .offers-item .offer-link {
   display: block;
   margin-top: 15px;
+  margin-bottom: 15px;
   width: 135px;
-  height: 38px;
+  min-height: 38px;
   color: var(--basic-white);
   font-size: 14px;
   line-height: 18px;
   text-align: center;
-  padding-top: 10px;
+  padding: 10px;
   text-transform: uppercase;
-  background-color: var(--special-third-link-background);     /* Уточнить насчет цвета */
+  background-color: var(--special-third-link-background);
 }
 
 .offers-item .offer-link:hover {
-  background-color: var(--special-third-hover-background);     /* Уточнить насчет цвета */
+  background-color: var(--special-third-hover-background);
 }
 
 .offers-item .offer-link:active {
-  background-color: var(--special-third-active-background);     /* Уточнить насчет цвета */
+  background-color: var(--special-third-active-background);
 }
 
 .offer-image {
   position: absolute;
   width: 140px;
-  height: 123px;
+  height: 120px;
   right: 0px;
-  bottom: 0px;
+  top: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .offers-slider {
+  background-color: var(--special-slider-background);
   grid-area: slide;
   position: relative;
 }
@@ -755,7 +751,7 @@ h4 {
 }
 
 .red-button {
-  display: inline-block;
+  display: block;
   vertical-align: top;
   background-color: var(--basic-red);
   color: var(--basic-white);
@@ -878,6 +874,10 @@ h4 {
   align-items: center;
 }
 
+.product-list {
+  align-items: flex-start;
+}
+
 .manufacturers-list {
   margin-bottom: 50px;
 }
@@ -907,13 +907,22 @@ h4 {
 
 .product-name {
   margin: 0 30px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--basic-black);
 }
 
 .main-price {
   display: block;
-  position: absolute;
+  /* position: absolute;
   top: 257px;
-  left: 45px;
+  left: 45px; */
+  margin-top: 13px;
+  margin-left: 46px;
+  margin-bottom: 10px;
   width: 141px;
   height: 38px;
   text-align: left;
@@ -932,6 +941,7 @@ h4 {
   color: var(--basic-grey-dark);
   text-decoration-line: line-through;
   text-transform: uppercase;
+  min-height: 26px;
 }
 
 .main-price p {
@@ -960,6 +970,8 @@ h4 {
 
 .buy-button,
 .bookmark-button {
+  display: block;
+  text-align: left;
   width: 135px;
   height: 38px;
   text-transform: uppercase;
@@ -968,15 +980,34 @@ h4 {
 }
 
 .buy-button {
-  margin-top: 38px;
+  position: relative;
+  margin: 38px 41px 0 44px;
+  text-align: left;
+  padding-left: 54px;
+  padding-top: 6px;
   background: var(--basic-green);
   color: var(--basic-white);
   border: none;
   box-shadow: inset 0px -3px 0px var(--special-box-shadow);
 }
 
+.buy-button::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 28px;
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+}
+
 .bookmark-button {
-  margin-top: 10px;
+  margin: 10px 41px 0 44px;
+  padding-left: 35px;
+  padding-top: 4px;
   background: var(--basic-white);
   color: var(--basic-asphalt-light);
   border: 3px solid var(--basic-green);
@@ -990,12 +1021,12 @@ h4 {
   border: 3px solid var(--basic-asphalt-light);
 }
 
-.buy-button:focus {
+.buy-button:active {
   background: var(--special-confirm);
   outline: none;
 }
 
-.bookmark-button:focus {
+.bookmark-button:active {
   border: 3px solid var(--special-asphalt-light);
   color: var(--special-asphalt-light);
   outline: none;
@@ -2111,4 +2142,15 @@ h4 {
 
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+
+@keyframes bounce {
+  0%   {transform: translateY(2000px);}
+
+  70%  {transform: translateY(-30px);}
+
+  90%  {transform: translateY(10px);}
+
+  100% {transform: translateY(0);}
 }

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link href="css/styles-min.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -32,7 +32,7 @@
       <div class="header-bottom container">
         <div class="header-middle">
           <section class="header-about">
-            <h1>Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</h1>
+            <h1 class="site-header">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</h1>
           </section>
           <section class="header-contacts">
             <a tabindex="0" class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -66,35 +66,35 @@
         <h2 class="visually-hidden">Основные предложения</h2>
         <div class="offers-grid container">
             <div class="offers-item offer-yellow item-new-offers">
-              <h3>Материалы</h3>
+              <h3 class="offer-header">Материалы</h3>
               <a tabindex="0" class="offer-link" href="blank.html">На любой вкус</a>
               <div class="offer-image">
                 <img class="offer-icon" src="img/icon-1.svg" width="44" height="65" alt="Предложения на любой вкус">
               </div>
             </div>
             <div class="offers-item offer-blue">
-              <h3>Инструмент</h3>
+              <h3 class="offer-header">Инструмент</h3>
               <a tabindex="0" class="offer-link" href="blank.html">На все случаи</a>
               <div class="offer-image">
                 <img class="offer-icon" src="img/icon-2.svg" width="75" height="61" alt="Предложения на все случаи">
               </div>
             </div>
             <div class="offers-item offer-lilac">
-              <h3>Техника</h3>
+              <h3 class="offer-header">Техника</h3>
               <a tabindex="0" class="offer-link" href="blank.html">Для стройки</a>
               <div class="offer-image">
                 <img class="offer-icon" src="img/icon-3.svg" width="78" height="62" alt="Предложения для стройки">
               </div>
             </div>
             <div class="offers-item offer-greenlight">
-              <h3>Скидки 50%</h3>
+              <h3 class="offer-header">Скидки 50%</h3>
               <a tabindex="0" class="offer-link" href="blank.html">На 350 товаров</a>
               <div class="offer-image">
                 <img class="offer-icon" src="img/icon-4.svg" width="59" height="73" alt="Предложения со скидками">
               </div>
             </div>
             <div class="offers-item offer-yellowlight">
-              <h3>Доставка</h3>
+              <h3 class="offer-header">Доставка</h3>
               <a tabindex="0" class="offer-link" href="blank.html">Бесплатно</a>
               <div class="offer-image">
                 <img class="offer-icon" src="img/icon-5.svg" width="78" height="63" alt="Доставка бесплатно">
@@ -157,8 +157,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 9000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 9000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -175,8 +175,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item" tabindex="0">
@@ -193,8 +193,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -204,14 +204,15 @@
               <a tabindex="0" href="#">
                 <h4 class="product-name">Перфоратор BOSCH BFG 2000</h4>
               </a>
+              <span></span>
               <div class="main-price">
                 <p>
                   12500 р.
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</a>
               </div>
             </li>
           </ul>
@@ -309,7 +310,7 @@
             <p class="top-about-right">
               Вы можете забрать товар сами, <br>заехав в наш офис:
             </p>
-            <img class="map-image" tabindex="0" src="img/map.png" alt="Карта" width="300" height="158">
+            <a href="map.html"><img class="map-image" tabindex="0" src="img/map.png" alt="Карта" width="300" height="158"></a>
             <a tabindex="0" class="red-button contacts-button write-us">Заблудились? Напишите нам</a>
           </section>
         </div>

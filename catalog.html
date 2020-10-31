@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans&amp;subset=cyrillic" rel="stylesheet">
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/normalize-min.css" rel="stylesheet">
+    <link href="css/styles-min.css" rel="stylesheet">
   </head>
   <body class="page-body">
     <header class="main-header">
@@ -32,7 +32,7 @@
       <div class="header-bottom container">
         <div class="header-middle">
           <section class="header-about">
-            <h1>Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</h1>
+            <h1 class="site-header">Интернет-магазин <br> строительных материалов <br> и инструментов для ремонта</h1>
           </section>
           <section class="header-contacts">
             <a tabindex="0" class="phone-number" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -116,8 +116,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min" tabindex="0"></div>
-                  <div class="toggle toggle-max" tabindex="0"></div>
+                  <div class="toggle toggle-min" tabindex="0" aria-label="Ползунок с минимальной ценой"></div>
+                  <div class="toggle toggle-max" tabindex="0" aria-label="Ползунок с максимальной ценой"></div>
                 </div>
                 <div class="price-controls">
                   <label class="min-price">
@@ -184,14 +184,14 @@
             </ul>
             <ul class="sorting-icons">
               <li tabindex="0" class="sort-item-arrow arrow-active">
-                <a href="#">
+                <a href="#" aria-label="Сортировка по возрастанию">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-up">
-                  <path fill="#c5c5c5" d="M5.5 0L0 10h11z" />
+                  <path fill="#c5c5c5" d="M5.5 0L0 10h11z" /></svg>
                 </a>
               </svg>
               </li>
               <li tabindex="0" class="sort-item-arrow">
-                <a href="#">
+                <a href="#" aria-label="Сортировка по убыванию">
                   <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10" class="sort-svg-down">
                   <path fill="#c5c5c5" d="M5.5 10L0 0h11" /></svg>
                 </a>
@@ -213,8 +213,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 9000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item" tabindex="0">
@@ -231,8 +231,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -249,8 +249,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -267,8 +267,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item" tabindex="0">
@@ -285,8 +285,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -303,8 +303,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -321,8 +321,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item" tabindex="0">
@@ -339,8 +339,8 @@
                 </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">В закладки</a>
               </div>
             </li>
             <li class="catalog-item item-new-products" tabindex="0">
@@ -357,8 +357,8 @@
               </p>
               </div>
               <div class="catalog-item-buttons">
-                <button type="button" name="button" class="buy-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</button>
-                <button type="button" name="button" class="bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</button>
+                <a class="buy-button" href="cart.html" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">Купить</a>
+                <a class="bookmark-button" href="bookmarks.html" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">В закладки</a>
               </div>
             </li>
           </ul>
